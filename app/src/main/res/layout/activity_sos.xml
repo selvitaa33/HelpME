@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:background="@color/primary_blue"
+        android:gravity="center_vertical" android:paddingStart="4dp" android:paddingEnd="16dp">
+        <ImageButton android:id="@+id/btnBack"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_rew"
+            android:tint="@color/white" android:contentDescription="Kembali" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="SOS Darurat" android:textColor="@color/white"
+            android:textSize="18sp" android:textStyle="bold" android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Status teks SOS -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTextDisplay"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_margin="12dp" android:visibility="gone"
+        app:cardCornerRadius="10dp" app:cardElevation="4dp" app:cardBackgroundColor="#FFEBEE">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🚨" android:textSize="22sp" android:layout_marginEnd="10dp"/>
+            <TextView android:id="@+id/tvTextDisplay"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text=""
+                android:textColor="#E53935" android:textSize="14sp" android:textStyle="bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:overScrollMode="never">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp" android:gravity="center_horizontal">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Tekan tombol SOS jika dalam keadaan darurat"
+                android:textColor="@color/text_secondary" android:textSize="13sp"
+                android:gravity="center" android:layout_marginBottom="20dp" />
+
+            <Button android:id="@+id/btnSOSMain"
+                android:layout_width="180dp" android:layout_height="180dp"
+                android:text="SOS" android:textColor="@color/white"
+                android:textSize="28sp" android:textStyle="bold"
+                android:backgroundTint="#E53935"
+                app:cornerRadius="90dp" android:layout_marginBottom="8dp" />
+
+            <View android:id="@+id/sosRipple"
+                android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+
+            <TextView android:id="@+id/tvSOSStatus"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Siap digunakan" android:textColor="@color/text_secondary"
+                android:textSize="13sp" android:gravity="center" android:layout_marginBottom="24dp" />
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnSOSVoice"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Suarakan Bantuan"
+                        android:textColor="#E53935" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Memutar suara minta tolong berulang-ulang"
+                        android:textColor="@color/text_secondary" android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnSOSCallContact"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Hubungi Kontak Darurat"
+                        android:textColor="@color/primary_blue" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Menelepon kontak yang tersimpan"
+                        android:textColor="@color/text_secondary" android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnSOSCall119"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Hubungi 119 (Ambulans)"
+                        android:textColor="@color/primary_blue" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Darurat" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnSOSCall110"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Hubungi 110 (Polisi)"
+                        android:textColor="@color/primary_blue" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Darurat" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSOSStop"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:src="@android:drawable/ic_media_pause"
+        app:backgroundTint="#E53935" app:tint="@color/white"
+        android:contentDescription="Hentikan SOS" />
+
+</LinearLayout>

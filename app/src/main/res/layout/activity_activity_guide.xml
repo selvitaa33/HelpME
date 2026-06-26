@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/primary_blue"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp">
+        <ImageButton android:id="@+id/btnBack"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_rew"
+            android:tint="@color/white" android:contentDescription="Kembali" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Panduan Aktivitas" android:textColor="@color/white"
+            android:textSize="18sp" android:textStyle="bold" android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Kotak teks panduan aktif -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTextDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#E3F2FD">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="14dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Panduan:" android:textColor="@color/primary_blue"
+                android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <TextView android:id="@+id/tvTextDisplay"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="" android:textColor="@color/text_primary"
+                android:textSize="14sp" android:lineSpacingMultiplier="1.4" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:overScrollMode="never">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Rutinitas Pagi" android:textColor="@color/text_primary"
+                android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnWakeUp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Bangun Tidur" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pagi" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnBrushTeeth"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Sikat Gigi" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pagi" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnBathe"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Mandi" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pagi" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnEat"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Makan" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pagi" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Aktivitas Siang" android:textColor="@color/text_primary"
+                android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnWalk"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Berjalan / Olahraga Ringan" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Siang" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnDrink"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Minum Air" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Siang" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnRest"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Istirahat Siang" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Siang" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Rutinitas Malam" android:textColor="@color/text_primary"
+                android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnNightRoutine"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Persiapan Tidur" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Malam" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/btnMedicine"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white" android:foreground="?attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Minum Obat" android:textColor="@color/primary_blue"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Malam" android:textColor="@color/text_secondary"
+                        android:textSize="13sp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:src="@android:drawable/ic_media_pause"
+        app:backgroundTint="@color/primary_blue" app:tint="@color/white"
+        android:contentDescription="Hentikan suara" />
+
+</LinearLayout>

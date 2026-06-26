@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelpME</string>
+    <string name="voice_guide">Panduan Suara</string>
+    <string name="quick_comm">Komunikasi Cepat</string>
+    <string name="sos">SOS Darurat</string>
+    <string name="activity_guide">Panduan Aktivitas</string>
+    <string name="important_contacts">Kontak Penting</string>
+</resources>

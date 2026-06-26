@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- HelpME Blue Theme -->
+    <color name="primary_blue">#1E88E5</color>
+    <color name="primary_blue_dark">#1565C0</color>
+    <color name="primary_blue_light">#64B5F6</color>
+    <color name="blue_hero_start">#42A5F5</color>
+    <color name="blue_hero_end">#1565C0</color>
+
+    <!-- Backgrounds -->
+    <color name="bg_screen">#F0F4FF</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_toolbar">#1E88E5</color>
+
+    <!-- Text -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#616161</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="text_blue">#1E88E5</color>
+    <color name="text_on_blue">#FFFFFF</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Bottom Nav -->
+    <color name="nav_selected">#1E88E5</color>
+    <color name="nav_unselected">#9E9E9E</color>
+
+    <!-- Card accent colors -->
+    <color name="card_voice">#1E88E5</color>
+    <color name="card_comm">#26C6DA</color>
+    <color name="card_sos">#EF5350</color>
+    <color name="card_activity">#66BB6A</color>
+    <color name="card_contact">#AB47BC</color>
+
+    <!-- Misc -->
+    <color name="divider">#E3EAF5</color>
+    <color name="fab_blue">#1E88E5</color>
+    <color name="status_bar">#1565C0</color>
+    <color name="red_hero_start">#42A5F5</color>
+    <color name="red_hero_end">#1565C0</color>
+
+    <!-- Legacy kept for compatibility -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="accent_blue">#1E88E5</color>
+    <color name="accent_cyan">#00BCD4</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_red">#EF5350</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_purple">#9C27B0</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_bg_light">#F0F4FF</color>
+    <color name="primary_dark">#FFFFFF</color>
+    <color name="primary_navy">#1E88E5</color>
+    <color name="primary_red">#1E88E5</color>
+    <color name="primary_red_dark">#1565C0</color>
+    <color name="primary_red_light">#64B5F6</color>
+    <color name="surface">#F0F4FF</color>
+    <color name="sos_red">#EF5350</color>
+    <color name="sos_red_dark">#C62828</color>
+    <color name="ripple">#BBDEFB</color>
+</resources>
